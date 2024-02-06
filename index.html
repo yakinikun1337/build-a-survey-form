@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Travel Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Travel Survey Form</h1>
+            <p id="description" class="description text-center">
+                Share your travel preferences and help us improve your experience.
+            </p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your Email" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" id="number" class="form-control" placeholder="Age" min="13" max="120" />
+            </div>
+            <div class="form-group">
+                <p>Your preferred travel destination:</p>
+                <select id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select a destination</option>
+                    <option value="paris">Paris</option>
+                    <option value="new-york">New York</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Preferred mode of travel:</p>
+                <label>
+                    <input name="travel-mode" value="airplane" type="radio" class="input-radio" checked />Airplane</label>
+                <label>
+                    <input name="travel-mode" value="train" type="radio" class="input-radio" />Train</label>
+                <label>
+                    <input name="travel-mode" value="car" type="radio" class="input-radio" />Car</label>
+            </div>
+            <div class="form-group">
+                <p>Travel amenities important to you:</p>
+                <label><input name="amenities" value="wifi" type="checkbox" class="input-checkbox" />Wi-Fi</label>
+                <label><input name="amenities" value="legroom" type="checkbox" class="input-checkbox" />Extra Legroom</label>
+                <label><input name="amenities" value="meals" type="checkbox" class="input-checkbox" />Complimentary Meals</label>
+                <label><input name="amenities" value="window-seat" type="checkbox" class="input-checkbox" />Window Seat</label>
+            </div>
+            <div class="form-group">
+                <p>Additional comments or suggestions:</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Your feedback..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
